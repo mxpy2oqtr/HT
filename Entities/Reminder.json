@@ -1,0 +1,66 @@
+{
+  "name": "Reminder",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "water",
+        "steps",
+        "meal",
+        "sleep",
+        "exercise",
+        "custom"
+      ],
+      "description": "Tipo de recordatorio"
+    },
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo del recordatorio"
+    },
+    "message": {
+      "type": "string",
+      "description": "Mensaje del recordatorio"
+    },
+    "time": {
+      "type": "string",
+      "description": "Hora del recordatorio (HH:mm)"
+    },
+    "days": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "D\u00edas de la semana activos"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_smart": {
+      "type": "boolean",
+      "default": false,
+      "description": "Si es un recordatorio inteligente basado en progreso"
+    },
+    "smart_trigger": {
+      "type": "string",
+      "enum": [
+        "below_50",
+        "below_75",
+        "near_goal",
+        "no_activity"
+      ],
+      "description": "Condici\u00f3n para activar recordatorio inteligente"
+    },
+    "last_triggered": {
+      "type": "string",
+      "format": "date-time",
+      "description": "\u00daltima vez que se activ\u00f3"
+    }
+  },
+  "required": [
+    "type",
+    "title",
+    "message"
+  ]
+}

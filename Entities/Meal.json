@@ -1,0 +1,63 @@
+{
+  "name": "Meal",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre de la comida"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "description": "Tipo de comida"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha"
+    },
+    "time": {
+      "type": "string",
+      "description": "Hora de la comida"
+    },
+    "calories": {
+      "type": "number",
+      "description": "Calor\u00edas totales"
+    },
+    "protein_g": {
+      "type": "number",
+      "description": "Prote\u00ednas en gramos"
+    },
+    "carbs_g": {
+      "type": "number",
+      "description": "Carbohidratos en gramos"
+    },
+    "fat_g": {
+      "type": "number",
+      "description": "Grasas en gramos"
+    },
+    "fiber_g": {
+      "type": "number",
+      "description": "Fibra en gramos"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Foto de la comida"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas adicionales"
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "date",
+    "calories"
+  ]
+}

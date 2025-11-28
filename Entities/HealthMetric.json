@@ -1,0 +1,72 @@
+{
+  "name": "HealthMetric",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha de la m\u00e9trica"
+    },
+    "steps": {
+      "type": "number",
+      "default": 0,
+      "description": "Pasos del d\u00eda"
+    },
+    "calories_burned": {
+      "type": "number",
+      "default": 0,
+      "description": "Calor\u00edas quemadas"
+    },
+    "calories_consumed": {
+      "type": "number",
+      "default": 0,
+      "description": "Calor\u00edas consumidas"
+    },
+    "water_ml": {
+      "type": "number",
+      "default": 0,
+      "description": "Agua consumida en ml"
+    },
+    "sleep_hours": {
+      "type": "number",
+      "default": 0,
+      "description": "Horas de sue\u00f1o"
+    },
+    "sleep_quality": {
+      "type": "string",
+      "enum": [
+        "poor",
+        "fair",
+        "good",
+        "excellent"
+      ],
+      "description": "Calidad del sue\u00f1o"
+    },
+    "weight_kg": {
+      "type": "number",
+      "description": "Peso en kg"
+    },
+    "heart_rate_avg": {
+      "type": "number",
+      "description": "Frecuencia card\u00edaca promedio"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "terrible",
+        "bad",
+        "neutral",
+        "good",
+        "great"
+      ],
+      "description": "Estado de \u00e1nimo"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas adicionales"
+    }
+  },
+  "required": [
+    "date"
+  ]
+}

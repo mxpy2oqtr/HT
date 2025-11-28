@@ -1,0 +1,69 @@
+{
+  "name": "Activity",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre de la actividad"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "walking",
+        "running",
+        "cycling",
+        "swimming",
+        "gym",
+        "yoga",
+        "sports",
+        "other"
+      ],
+      "description": "Tipo de actividad"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha de la actividad"
+    },
+    "start_time": {
+      "type": "string",
+      "description": "Hora de inicio"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Duraci\u00f3n en minutos"
+    },
+    "calories_burned": {
+      "type": "number",
+      "description": "Calor\u00edas quemadas"
+    },
+    "distance_km": {
+      "type": "number",
+      "description": "Distancia en km"
+    },
+    "intensity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "extreme"
+      ],
+      "description": "Intensidad del ejercicio"
+    },
+    "heart_rate_avg": {
+      "type": "number",
+      "description": "Frecuencia card\u00edaca promedio"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas sobre la actividad"
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "date",
+    "duration_minutes"
+  ]
+}
